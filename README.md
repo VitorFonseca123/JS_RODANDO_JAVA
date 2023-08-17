@@ -17,6 +17,6 @@ $ npm install express
 ```
 Para rodar use: 
 ```bash
-$ node scrit.js
+$ node script.js
 ```
 após isso acesse o localhost/3000 (pode ser mudado na aplicação)
