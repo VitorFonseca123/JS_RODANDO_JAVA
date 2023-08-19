@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Formulário Node.js</title>
 </head>
+
 <body>
-  <h1>Formulário de Exemplo</h1>
+  <!-- <h1>Formulário de Exemplo</h1>
   <form method="POST" action="/submit">
     <label for="name">Nome:</label>
     <input type="text" id="name" name="name" required><br><br>
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required><br><br>
     <button type="submit">Enviar</button>
-  </form>
+  </form>-->
+  <h1>Exemplo de Botão para Node.js</h1>
+  <button id="botao">Clique para executar algo</button>
+
+  <script>
+    const botao = document.getElementById('botao');
+    botao.addEventListener('click', async () => {
+      const response = await fetch('/executar-algo', { method: 'GET' });
+      const result = await response.text();
+      console.log(result);
+      alert('Ação executada no servidor Node.js!');
+    });
+  </script>
 </body>
+
 </html>
