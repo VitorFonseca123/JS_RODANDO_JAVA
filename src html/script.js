@@ -19,10 +19,10 @@ app.get('/', (req, res) => {
 app.post('/submit', (req, res) => {
   const { name, email } = req.body;
   const modifiedString = name.replace(/\s+/g, "_");
-  res.send(`Dados recebidos:<br>Nome: ${modifiedString}`);
 
   shell.cd('../java');
   shell.exec(`java -cp bin GeradorDeRelatorios ${modifiedString}`);
+  shell.cd('../src html');
 });
 
 app.listen(port, () => {
