@@ -5,7 +5,7 @@ public class GeradorDeRelatorios {
 
 	public static void main(String [] args) {
 
-		String nome = args[0];
+		String nome = "teste";
 		JOptionPane.showMessageDialog(null,nome);
 
 	}

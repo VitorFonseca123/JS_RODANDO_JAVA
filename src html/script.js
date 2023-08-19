@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.post('/submit', (req, res) => {
   const { name, email } = req.body;
   const modifiedString = name.replace(/\s+/g, "_");
-  
+
 
   shell.cd('../java');
   shell.exec(`java -cp bin GeradorDeRelatorios ${modifiedString}`);
@@ -27,7 +27,9 @@ app.post('/submit', (req, res) => {
 app.get('/executar-algo', (req, res) => {
   // Aqui você pode adicionar a lógica que deseja executar quando o botão for clicado
   console.log('Botão clicado! Fazendo algo...');
-  res.send('Algo foi executado no servidor Node.js!');
+  res.send('Algo foi executado no java');
+  shell.cd('../java');
+  shell.exec(`java -cp bin GeradorDeRelatorios`);
 });
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
