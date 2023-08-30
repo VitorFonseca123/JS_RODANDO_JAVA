@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Horizontal</title>
+  <title>Hospital EACH</title>
   <link rel="stylesheet" href="css/styles.css">
-  <script type="text/javascript" src="js/htmljs.js"></script>
 </head>
 
 <body>
@@ -15,18 +15,20 @@
     <ul>
       <li>
         <a href="teste.html">
-          Home
+          <b>Home</b>
         </a>
       </li>
 
-      <li><a id="openPopup">Marcação</a></li>
+      <li><a onclick="openModal()"><b>Marcação</b></a></li>
 
-      
+
     </ul>
   </nav>
-  <div class="popup" id="popup">
-    <div class="popup-content">
-      <h2>Cadastro</h2>
+ 
+
+  <div class="modal-container">
+    <div class="modal">
+      <h2>Marcar Consulta</h2>
       <form>
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required><br><br>
@@ -34,12 +36,16 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
 
-        <button type="submit">Cadastrar</button>
+        <div class="btns">
+          <button class="btnOK" onclick="closeModal()">Cadastrar</button>
+          <button class="btnClose" onclick="closeModal()">Fechar</button>
+        </div>
       </form>
-      <button id="closePopup">Fechar</button>
+
     </div>
   </div>
 
+  <script src="js/htmljs.js"></script>
 </body>
 
 </html>
