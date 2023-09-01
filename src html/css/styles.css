@@ -84,28 +84,93 @@ span {
   margin: 10px auto;
 }
 
-.btns {
+
+
+
+.campo {
+  background-color: #f6f6f6;
+  border: none;
+  outline: none;
+  color: #0d0d0d;
+  padding: 10px 5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid #f6f6f6;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  float: left;
+  transition: 0.3s;
+}
+.campo:focus {
+
+  background-color: #fff;
+  color: #ed9d56;
+}
+
+.campo:placeholder {
+  color: #cccccc;
+}
+/*.botao {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-}
-
-.btns button {
-  font-size: medium;
-  padding: 10px;
+  text-align: center;
   border: none;
-  border-radius: 5px;
-  color: white;
+  color: #fff;
   cursor: pointer;
+  padding: 10px;
+ 
+  font-size:18px;
+  -webkit-border-radius:4px;
+  border-radius:5px;
+  transition: 0.3s;
+  
+}*/
+.botao {
+  display: block;
+  float:left;
+  background-color: #ed9d56;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 50px;
+  text-align: center;
+  font-size:18px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  transition: 0.3s;
+  margin-left: 10px;
+  
+}
+#btnClose{
+  background-color: red !important;
+}
+#btnCad{
+  background-color: #A7C8F2 !important;
+}
+.botao:hover  { background-color: #404040; }
+.campo {
+  
+  background-color: #f6f6f6;
+  border: none;
+  outline: none;
+  color: #0d0d0d;
+  padding: 10px 5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid #f6f6f6;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  float: left;
+  transition: 0.3s;
 }
 
-.btnOK {
-  background-color: blue !important;
-}
 
-.btnClose {
-  background-color: brown !important;
-}
+
 
 @media (max-width: 500px) {
   .modal {
@@ -114,7 +179,7 @@ span {
   }
 
   span,
-  .btns button {
+  .botao button {
     font-size: smaller;
   }
 }
