@@ -1,5 +1,6 @@
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,24 +9,38 @@ import java.io.IOException;
 public class Main{
     public static void main(String[] args) {
         try {
-            // Carregar o arquivo HTML
-            Document document = Jsoup.parse(new File("../../src html/teste copy.html"), "UTF-8");
+            File inputFile = new File("../../src html/copia.html");
+            Document document = Jsoup.parse(inputFile, "UTF-8");
 
-            // Agora você tem o documento HTML pronto para edição
-            // Você pode fazer várias operações, como buscar elementos e editar seu conteúdo
+            // Encontre o elemento <div> com ID "modifica"
+            Element divElement = document.getElementById("modifica");
 
-            // Por exemplo, você pode alterar o conteúdo de um elemento:
-            document.select("div").first().text("Novo Título");
+            // Verifique se o elemento foi encontrado
+            if (divElement != null) {
+                // Modifique o conteúdo do elemento <div>
+                divElement.text("Novo conteúdo da div com ID 'modifica'");
 
-            // Ou adicionar um novo elemento:
-            document.body().append("<p>Este é um novo parágrafo.</p>");
+                // Especifique o caminho para a pasta onde você deseja salvar o arquivo
+                String outputFolderPath = "../../src html/";
 
-            // Salvar as alterações de volta no arquivo HTML
-            FileWriter fileWriter = new FileWriter("exemplo.html");
-            fileWriter.write(document.outerHtml());
-            fileWriter.close();
+                // Crie o diretório de saída se ele não existir
+                File outputFolder = new File(outputFolderPath);
+                if (!outputFolder.exists()) {
+                    outputFolder.mkdirs();
+                }
 
-            System.out.println("Arquivo HTML editado com sucesso.");
+                // Crie um novo arquivo de saída na pasta especificada
+                File outputFile = new File(outputFolderPath, "copia.html");
+
+                // Salvar as alterações de volta no arquivo HTML
+                FileWriter fileWriter = new FileWriter(outputFile);
+                fileWriter.write(document.outerHtml());
+                fileWriter.close();
+
+                System.out.println("Conteúdo da div com ID 'modifica' modificado e arquivo salvo com sucesso em " + outputFile.getAbsolutePath());
+            } else {
+                System.out.println("Elemento <div> com ID 'modifica' não encontrado no arquivo HTML.");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
