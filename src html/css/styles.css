@@ -78,7 +78,7 @@ hr {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: left;
 }
 
 .active {
@@ -105,25 +105,6 @@ span {
   margin: 10px auto;
 }
 
-
-
-
-.campo {
-  background-color: #f6f6f6;
-  border: none;
-  outline: none;
-  color: #0d0d0d;
-  padding: 10px 5px;
-  text-decoration: none;
-  font-size: 16px;
-  margin-bottom: 10px;
-  width: 100%;
-  border: 2px solid #f6f6f6;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  float: left;
-  transition: 0.3s;
-}
 .campo:focus {
 
   background-color: #fff;
@@ -139,6 +120,7 @@ span {
   float:left;;
   border: none;
   color: #fff;
+  
   cursor: pointer;
   padding: 15px 50px;
   text-align: center;
@@ -167,11 +149,18 @@ span {
   font-size: 16px;
   margin-bottom: 10px;
   width: 100%;
-  border: 2px solid #f6f6f6;
+  border: 1px solid #0d0d0d;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   float: left;
   transition: 0.3s;
+}
+#especialidade{
+  color: #0d0d0d;
+  
+}
+.campo select{
+  border: 1px solid #0d0d0d;
 }
 
 
