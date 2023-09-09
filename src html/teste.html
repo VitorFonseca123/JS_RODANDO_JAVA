@@ -34,10 +34,17 @@
       <form>
         <input class="campo" type="text" id="nome" name="nome" placeholder="Nome" required>
         <input class="campo" type="email" id="email" name="email" placeholder="CPF" required><br><br>
-        <label>Especialidade</label>
+        <label>Especialidade</label><br>
         <select class="campo" name="especialidade" id="especialidade">
           <option value="Exemplo">Exemplo</option>
         </select>
+        <label>Especialidade</label><br>
+        <select class="campo" name="Medico" id="Medico">
+          <option value="Exemplo">Exemplo</option>
+        </select>
+        <label for="data_e_hora">Data e Hora</label>
+        <input class="campo" type="datetime-local" id="data_e_hora" name="data_e_hora">
+        
         <div class="button-container">
           <input class="botao" type="submit" id="btnCad" value="Cadastrar">
           <button class="botao" id="btnClose" onclick="closeModal()">Fechar</button>

@@ -51,7 +51,7 @@
 
 #menu-h ul li a:hover {
   background-color: #28c1df;
-  border-bottom: 3px solid #fb9e0d;
+  
 }
 
 
@@ -108,7 +108,7 @@ span {
 .campo:focus {
 
   background-color: #fff;
-  color: #ed9d56;
+ 
 }
 
 .campo:placeholder {
